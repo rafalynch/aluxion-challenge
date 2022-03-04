@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import Product from "./Product";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
-import { Button, Nav } from "./styles/Body.styled";
+import { StyledBody, Button, Nav } from "./styles/Body.styled";
 import NavLink from "./NavLink";
 import sillaNegra from "../assets/images/silla-negra.png";
 import mesaNegra from "../assets/images/mesa-negra.png";
@@ -50,7 +50,7 @@ export default function() {
   ];
 
   return (
-    <div>
+    <StyledBody>
       <Button onClick={handleClickButton}>Product Details</Button>
       <Nav>
         {productsArray.map((product) => {
@@ -73,6 +73,6 @@ export default function() {
           ></Product>
         );
       })}
-    </div>
+    </StyledBody>
   );
 }

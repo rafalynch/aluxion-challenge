@@ -15,6 +15,7 @@ export const StyledHeader = styled.header`
 
   @media (max-width: 480px) {
     padding-right: ${({ theme }) => theme.bodyMargin.mobile};
+    padding-left: ${({ theme }) => theme.bodyMargin.mobile};
   }
 `;
 

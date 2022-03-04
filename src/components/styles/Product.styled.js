@@ -7,14 +7,27 @@ export const StyledProduct = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
+  padding-left: ${({ theme }) => theme.bodyMargin.default};
+  padding-right: ${({ theme }) => theme.bodyMargin.default};
 
   @media (max-width: 480px) {
+    padding-left: ${({ theme }) => theme.bodyMargin.mobile};
+    padding-right: ${({ theme }) => theme.bodyMargin.mobile};
     flex-direction: column;
     gap: 90px;
   }
 `;
 
-export const ProductImageContainer = styled.div``;
+export const ProductImageContainer = styled.div`
+  width: 100vw;
+  display: flex;
+  justify-content: end;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+`;
 
 export const DescriptionContainer = styled.div`
   left: ${({ theme }) => theme.bodyMargin.default};
