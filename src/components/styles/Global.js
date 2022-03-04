@@ -9,7 +9,12 @@ const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.colors.primary};
     font-family: "lato", sans-serif;
+    
   }
+
+  ::-webkit-scrollbar {
+  display: none;
+}
 
 `;
 export default GlobalStyles;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledSideMenu = styled.div`
   padding-top: 150px;
   position: absolute;
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.secondary};
   top: 0;
   left: 0;
   right: 0;

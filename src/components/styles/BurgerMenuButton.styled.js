@@ -16,19 +16,19 @@ export const StyledBurgerMenuButton = styled.div`
 
 export const LineOne = styled.div`
   height: 2px;
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.secondary};
   width: 20px;
 `;
 
 export const LineTwo = styled.div`
   height: 2px;
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.secondary};
   width: 12px;
 `;
 
 export const LineThree = styled.div`
   height: 2px;
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.secondary};
   width: 8px;
   justify-self: right;
 `;
