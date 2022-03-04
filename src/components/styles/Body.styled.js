@@ -9,17 +9,22 @@ export const StyledBody = styled.div`
 `;
 
 export const Nav = styled.nav`
+  width: 100vw;
   position: fixed;
   z-index: 2;
   bottom: 0;
-  left: ${({ theme }) => theme.bodyMargin.default};
-  margin: 15px;
+  border-top: solid 1px lightgray;
+  padding-bottom: 20px;
+  padding-left: ${({ theme }) => theme.bodyMargin.default};
+  padding-right: ${({ theme }) => theme.bodyMargin.default};
   display: flex;
   gap: 10px;
   color: ${({ theme }) => theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: 480px) {
-    left: ${({ theme }) => theme.bodyMargin.mobile};
+    padding-left: ${({ theme }) => theme.bodyMargin.mobile};
+    padding-right: ${({ theme }) => theme.bodyMargin.mobile};
   }
 `;
 
