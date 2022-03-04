@@ -56,6 +56,7 @@ export default function() {
         {productsArray.map((product) => {
           return (
             <NavLink
+              key={product.id}
               product={product}
               handleClick={handleClick}
               active={active}
@@ -67,6 +68,7 @@ export default function() {
       {productsArray.map((product) => {
         return (
           <Product
+            key={product.id}
             product={product}
             setProgress={setProgress}
             setActive={setActive}
