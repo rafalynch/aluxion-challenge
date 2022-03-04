@@ -14,6 +14,8 @@ export const StyledProduct = styled.div`
   }
 `;
 
+export const ProductImageContainer = styled.div``;
+
 export const DescriptionContainer = styled.div`
   left: 40px;
   top: 28%;
@@ -42,6 +44,7 @@ export const DescriptionContainer = styled.div`
     width: 250px;
     top: auto;
     left: auto;
+    margin-top: 20px;
     h1 {
       font-size: 24px;
       font-weight: 600;
