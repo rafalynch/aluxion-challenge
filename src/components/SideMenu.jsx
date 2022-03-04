@@ -59,8 +59,8 @@ export default function({ isActive }) {
     });
 
     itemImageTl.current.from(itemImage, {
-      duration: 0.5,
-      translateY: "25px",
+      duration: 1,
+      translateY: "50px",
       opacity: 0,
     });
   }, []);

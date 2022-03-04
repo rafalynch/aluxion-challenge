@@ -61,7 +61,7 @@ export default withTheme(function({ isActive, onClick, theme }) {
       },
       0
     );
-  }, []);
+  }, [theme.colors.primary, theme.colors.secondary]);
 
   useEffect(() => {
     if (isActive) {

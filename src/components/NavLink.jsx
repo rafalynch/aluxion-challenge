@@ -6,7 +6,7 @@ export default function({ product, active, handleClick, progress }) {
     <StyledNavLink key={product.id}>
       <ProgressBar
         style={{
-          width: product.id == active ? progress * 100 + "%" : "0%",
+          width: product.id === active ? progress * 100 + "%" : "0%",
         }}
       ></ProgressBar>
       <Container

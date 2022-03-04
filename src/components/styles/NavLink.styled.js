@@ -17,7 +17,7 @@ export const ProgressBar = styled.div`
 export const Container = styled.div`
   font-size: 12px;
   opacity: ${({ active, productId }) => {
-    return active == productId ? 1 : 0.5;
+    return active === productId ? 1 : 0.5;
   }};
 
   p {

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { gsap } from "gsap";
 import Product from "./Product";
 import ScrollTrigger from "gsap/ScrollTrigger";

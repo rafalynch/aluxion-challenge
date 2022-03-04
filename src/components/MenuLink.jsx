@@ -6,9 +6,8 @@ import {
   LinksContainer,
 } from "./styles/MenuLink.styled";
 
-export default function({ title, children, isActive, isSelected }) {
+export default function({ title, children, isActive }) {
   let linkTl = useRef(gsap.timeline({ paused: true, reversed: false }));
-  let titleRef = useRef(null);
   let links = useRef(null);
 
   const [isOpened, toggleOpen] = useState(false);
@@ -66,7 +65,7 @@ export default function({ title, children, isActive, isSelected }) {
       onMouseEnter={() => openLink(true)}
       onMouseLeave={() => openLink(false)}
     >
-      <Title ref={(e) => (titleRef = e)}>{title}</Title>
+      <Title>{title}</Title>
       <LinksContainer ref={(e) => (links = e)}>{children}</LinksContainer>
     </StyledMenuLink>
   );
