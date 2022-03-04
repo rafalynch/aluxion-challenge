@@ -14,12 +14,14 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Section({ product, setProgress, setActive }) {
   let section = useRef(null);
+  let productRef = useRef(null);
   let info = useRef(null);
 
   useEffect(() => {
-    gsap.to(section, {
+    gsap.to(productRef, {
       opacity: 0,
-      ease: "easeOut",
+      ease: "easeIn",
+      translateY: "-500px",
       scrollTrigger: {
         trigger: section,
         start: "top top",
@@ -40,9 +42,10 @@ export default function Section({ product, setProgress, setActive }) {
       },
     });
 
-    gsap.from(section, {
+    gsap.from(productRef, {
       opacity: 0,
-      ease: "power4.in",
+      ease: "easeIn",
+      translateY: "500px",
       scrollTrigger: {
         trigger: section,
         start: "top bottom",
@@ -70,8 +73,7 @@ export default function Section({ product, setProgress, setActive }) {
 
     gsap.to(info, {
       opacity: 0,
-      translateY: "-500%",
-      ease: "power4.out",
+      ease: "power4.In",
       scrollTrigger: {
         trigger: section,
         start: "top top",
@@ -80,7 +82,7 @@ export default function Section({ product, setProgress, setActive }) {
         scrub: 0,
         snap: {
           snapTo: 1,
-          duration: 0.6,
+          duration: 2,
           inertia: true,
           delay: 0,
         },
@@ -89,8 +91,7 @@ export default function Section({ product, setProgress, setActive }) {
 
     gsap.from(info, {
       opacity: 0,
-      translateY: "500%",
-      ease: "power4.in",
+      ease: "power4.Out",
       scrollTrigger: {
         trigger: section,
         start: "top bottom",
@@ -99,7 +100,7 @@ export default function Section({ product, setProgress, setActive }) {
         scrub: 0,
         snap: {
           snapTo: 1,
-          duration: 0.6,
+          duration: 2,
           inertia: true,
           delay: 0,
         },
@@ -109,7 +110,7 @@ export default function Section({ product, setProgress, setActive }) {
 
   return (
     <StyledProduct ref={(el) => (section = el)}>
-      <ProductImageContainer>
+      <ProductImageContainer ref={(el) => (productRef = el)}>
         <CollectionImage src={product.image}></CollectionImage>
       </ProductImageContainer>
       <DescriptionContainer ref={(el) => (info = el)}>
