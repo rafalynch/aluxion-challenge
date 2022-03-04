@@ -8,9 +8,13 @@ export const StyledSideMenu = styled.div`
   left: 0;
   right: 0;
   height: 100vh;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: ${({ theme }) => theme.bodyMargin.default};
+  padding-right: ${({ theme }) => theme.bodyMargin.default};
   z-index: 2;
+
+  @media (max-width: 480px) {
+    padding-right: ${({ theme }) => theme.bodyMargin.mobile};
+  }
 `;
 
 export const Grid = styled.div`

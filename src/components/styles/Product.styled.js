@@ -17,7 +17,7 @@ export const StyledProduct = styled.div`
 export const ProductImageContainer = styled.div``;
 
 export const DescriptionContainer = styled.div`
-  left: 40px;
+  left: ${({ theme }) => theme.bodyMargin.default};
   top: 28%;
   width: 400px;
   display: flex;

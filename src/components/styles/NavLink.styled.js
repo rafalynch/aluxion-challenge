@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 export const StyledNavLink = styled.a`
   cursor: pointer;
-  width: 120px;
+  width: 180px;
   height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 480px) {
+    width: 90px;
+  }
 `;
 
 export const ProgressBar = styled.div`

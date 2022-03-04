@@ -12,7 +12,13 @@ import MenuLink from "./MenuLink";
 import furnitureImage from "../assets/images/sofa-blanco.png";
 
 export default function({ isActive }) {
-  let menuTl = useRef(gsap.timeline({ paused: true, reversed: false }));
+  let menuTl = useRef(
+    gsap.timeline({
+      paused: true,
+      reversed: false,
+      onReverseComplete: () => setSelectedCollection(undefined),
+    })
+  );
   let contentInTl = useRef(gsap.timeline({ paused: true, reversed: false }));
   let contentOutTl = useRef(gsap.timeline({ paused: true, reversed: false }));
   let itemImageTl = useRef(gsap.timeline({ paused: true, reversed: false }));
@@ -59,9 +65,10 @@ export default function({ isActive }) {
     });
 
     itemImageTl.current.from(itemImage, {
-      duration: 1,
+      duration: 0.5,
       translateY: "50px",
       opacity: 0,
+      ease: "power3.Out",
     });
   }, []);
 
@@ -73,11 +80,10 @@ export default function({ isActive }) {
     if (isActive) {
       menuTl.current.play();
       contentInTl.current.restart();
-      setSelectedCollection(undefined);
     } else {
       menuTl.current.reverse();
       contentOutTl.current.restart();
-      setSelectedCollection(undefined);
+      itemImageTl.current.reverse();
     }
   }, [isActive]);
 
